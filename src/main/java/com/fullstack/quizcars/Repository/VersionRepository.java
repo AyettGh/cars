@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface VersionRepository extends JpaRepository<Version,Long> {
-    @Query(value = "select name from Version where var=modele_id ", nativeQuery = true)
+    @Query(value = "select name from Version where id=modele_id ", nativeQuery = true)
     List<Version> getAllVersion(Long id_modele);
 }
